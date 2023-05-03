@@ -4,7 +4,7 @@ def characterRemover(file, char):
   newLines = []
 
   for line in lines:
-    newLines.append(line.replace(char.lower(), '').replace(char.lower(), ''))
+    newLines.append(line.replace(char.lower(), '').replace(char.upper(), ''))
   
   newF = open(f"{char}-removed-{file}", 'w')
   newF.writelines(newLines)
